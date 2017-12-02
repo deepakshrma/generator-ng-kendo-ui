@@ -1,6 +1,6 @@
 {
   "name": "generator-ng-kendo-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Generator for kendo angular ui component",
   "main": "index.js",
   "scripts": {
@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/deepakshrma/generator-ng-kendo-ui#readme",
   "dependencies": {
+    "chalk": "^2.3.0",
+    "figlet": "^1.2.0",
+    "fs-extra": "^4.0.2",
     "yeoman-generator": "^2.0.1"
-  },
-  "devDependencies": {
-    "karma-chrome-launcher": "^2.2.0"
   }
 }
