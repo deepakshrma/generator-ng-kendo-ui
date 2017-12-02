@@ -30,5 +30,8 @@
   "homepage": "https://github.com/deepakshrma/generator-ng-kendo-ui#readme",
   "dependencies": {
     "yeoman-generator": "^2.0.1"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^2.2.0"
   }
 }
