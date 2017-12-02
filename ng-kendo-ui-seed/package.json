@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve | npm run api",
+    "start": "ng serve",
+    "start:api": "ng serve | npm run api",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
