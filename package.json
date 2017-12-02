@@ -1,0 +1,34 @@
+{
+  "name": "generator-ng-kendo-ui",
+  "version": "1.0.0",
+  "description": "Generator for kendo angular ui component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakshrma/generator-ng-kendo-ui.git"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "kendo",
+    "ui",
+    "angular",
+    "ng",
+    "angular2",
+    "angular-next",
+    "yeoman-generator"
+  ],
+  "author": "deepak.m.shrma@gmail.com <Deepak Vishwakarma>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deepakshrma/generator-ng-kendo-ui/issues"
+  },
+  "homepage": "https://github.com/deepakshrma/generator-ng-kendo-ui#readme",
+  "dependencies": {
+    "yeoman-generator": "^2.0.1"
+  }
+}

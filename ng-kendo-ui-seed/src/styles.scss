@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'CSS:~@progress/kendo-theme-default/dist/all.css';
+@import 'app/shared/styles/kendo-custom-default';
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: $body-bg;
+  font-family: 'Titillium Web', sans-serif;
+}

@@ -1,0 +1,10 @@
+@import "shared/styles/kendo-custom-default";
+header{
+  min-height: 50px;
+  background-color: $body-bg;
+  overflow-y: hidden;
+  i.in-out{
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
