@@ -12,9 +12,6 @@ export class AppComponent {
   show = false;
 
   get isUserLoggedIn() {
-    this._ls.isUserLoggedIn.subscribe ((islogin) => {
-      console.log (islogin);
-    })
     return this._ls.isUserLoggedIn;
   }
 

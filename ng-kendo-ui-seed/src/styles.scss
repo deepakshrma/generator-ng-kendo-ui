@@ -17,3 +17,91 @@ html {
 body {
   font-family: 'Titillium Web', sans-serif;
 }
+header{
+  min-height: 50px;
+  i.in-out{
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .ng-k-menu.other-options {
+    float: right;
+    position: relative;
+  }
+}
+#main {
+  min-height: 600px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+}
+
+#main > article {
+  margin: 4px;
+  padding: 5px;
+  flex: 3 1 60%;
+  order: 2;
+}
+
+#main > nav {
+  margin: 4px;
+  padding: 5px;
+  flex: 1 6 20%;
+  order: 1;
+}
+
+#main > aside {
+  margin: 4px;
+  padding: 5px;
+  flex: 1 6 20%;
+  order: 3;
+}
+
+footer {
+  background: #42A5F5;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  z-index: 999;
+  width: 100%;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  .collapsible {
+    position: absolute;
+    float: right;
+    top: -35px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  .container {
+    padding: 20px;
+    min-height: 100px;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+  header .ng-k-menu.other-options{
+    display: none !important;
+  }
+  #main, #page {
+    flex-direction: column;
+  }
+  #main > article, #main > nav, #main > aside {
+    order: 0;
+  }
+  #main > nav, #main > aside, header {
+    min-height: 50px;
+    max-height: 50px;
+  }
+}

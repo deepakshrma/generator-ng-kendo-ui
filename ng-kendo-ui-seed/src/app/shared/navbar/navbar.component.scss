@@ -1,21 +1,22 @@
 @import "../styles/kendo-custom-default";
-header{
+
+header {
   ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     position: absolute;
   }
   /*Create a horizontal list with spacing*/
   li {
-    display:inline-block;
+    display: inline-block;
     float: left;
     margin-right: 1px;
   }
   /*Style for menu links*/
   li a {
-    display:block;
-    min-width:140px;
+    display: block;
+    min-width: 140px;
     height: 50px;
     text-align: center;
     line-height: 50px;
@@ -70,15 +71,15 @@ header{
     display: none;
   }
   /*Hide checkbox*/
-  input[type=checkbox]{
+  input[type=checkbox] {
     display: none;
   }
   /*Show menu when invisible checkbox is checked*/
-  input[type=checkbox]:checked ~ .ng-k-menu{
+  input[type=checkbox]:checked ~ .ng-k-menu {
     display: block;
   }
   /*Responsive Styles*/
-  @media screen and (max-width : 760px){
+  @media screen and (max-width: 760px) {
     /*Make dropdown links appear inline*/
     ul {
       position: static;
@@ -94,7 +95,7 @@ header{
     }
     /*Display 'show menu' link*/
     .show-menu {
-      display:block;
+      display: block;
     }
   }
 }

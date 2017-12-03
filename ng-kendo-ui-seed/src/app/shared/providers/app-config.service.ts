@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs'
+import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
@@ -26,13 +26,13 @@ export class AppConfigService {
     const promise = new Promise ((resolve, reject) => {
       const localHost = new RegExp ('^localhost$|^127(?:\.[0-9]+){0,2}\.[0-9]+$|^(?:0*\:)*?:?0*1$');
       const configUrl = '/app-config';
-      const response = localHost.test (window.location.hostname) ? Observable.of(environment.service_urls) : this.http.get (configUrl).map ((res) => res.json ());
+      const response = localHost.test (window.location.hostname) ? Observable.of (environment.service_urls) : this.http.get (configUrl).map ((res) => res.json ());
       response.subscribe ((response: any) => {
-            this.allUrls = Object.assign ({}, this.allUrls, response);
-            InterceptedHttp.DEFAULT_ENDPOINT = this.allUrls.api_endpoint;
-            resolve ();
-          },
-          this.handleFailure (reject));
+          this.allUrls = Object.assign ({}, this.allUrls, response);
+          InterceptedHttp.DEFAULT_ENDPOINT = this.allUrls.api_endpoint;
+          resolve ();
+        },
+        this.handleFailure (reject));
     });
     return promise;
   }

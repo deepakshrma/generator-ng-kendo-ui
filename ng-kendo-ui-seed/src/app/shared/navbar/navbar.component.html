@@ -1,16 +1,18 @@
-<nav>
-  <label for="show-menu" class="show-menu">Menu</label>
-  <input type="checkbox" id="show-menu" role="button">
-  <ul class="ng-k-menu">
-    <li *ngFor="let route of routes">
-      <a routerLink="/login" routerLinkActive="active" *ngIf="route.children">{{route.label}} ￬</a>
-      <a routerLink="/login" routerLinkActive="active" *ngIf="!route.children">{{route.label}}</a>
-      <ul class="hidden" *ngIf="route.children">
-        <li *ngFor="let childRoute of route.children">
-          <a routerLink="{{childRoute.path}}" routerLinkActive="active">{{childRoute.label}}</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  <ng-content></ng-content>
-</nav>
+<header>
+  <nav>
+    <label for="show-menu" class="show-menu">Menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul class="ng-k-menu">
+      <li *ngFor="let route of routes">
+        <a routerLink="/login" routerLinkActive="active" *ngIf="route.children">{{route.label}} ￬</a>
+        <a routerLink="/login" routerLinkActive="active" *ngIf="!route.children">{{route.label}}</a>
+        <ul class="hidden" *ngIf="route.children">
+          <li *ngFor="let childRoute of route.children">
+            <a routerLink="{{childRoute.path}}" routerLinkActive="active">{{childRoute.label}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ng-content></ng-content>
+  </nav>
+</header>

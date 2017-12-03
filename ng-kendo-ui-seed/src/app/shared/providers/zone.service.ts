@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 export class ZoneService {
   constructor(private ngZone: NgZone) {
   }
+
   public map(source) {
     return Observable.create ((subscriber) => {
       this.ngZone.runOutsideAngular (() => {

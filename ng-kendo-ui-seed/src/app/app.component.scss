@@ -1,18 +1,1 @@
 @import "shared/styles/kendo-custom-default";
-header{
-  min-height: 50px;
-  overflow-y: hidden;
-  i.in-out{
-    font-size: 30px;
-    line-height: 50px;
-  }
-  .ng-k-menu.other-options {
-    float: right;
-    position: relative;
-  }
-  @media screen and (max-width : 760px){
-    .ng-k-menu.other-options{
-      display: none;
-    }
-  }
-}

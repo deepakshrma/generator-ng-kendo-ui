@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from "@angular/forms";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SharedCommonModule } from './shared/shared.common.module';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-@NgModule({
+@NgModule ({
   declarations: [
     AppComponent,
     LoginComponent,
@@ -23,4 +23,5 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+}

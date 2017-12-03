@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
-
 // import custom module and classes
 import { PageNotFoundComponent } from './statics/page-not-found.component';
 import { NavBarComponent } from './navbar/navbar.component';
@@ -21,7 +20,7 @@ const IMPORTS = [
   InputsModule,
   ButtonsModule
 ];
-const PROVIDERS = [LOGIN_GUARD_PROVIDER, LoginService, customHttpProvider()];
+const PROVIDERS = [LOGIN_GUARD_PROVIDER, LoginService, customHttpProvider ()];
 const DECLARATIONS = [NavBarComponent, PageNotFoundComponent];
 @NgModule ({
   declarations: [

@@ -22,14 +22,14 @@ describe ('CSTRequestOptions: Modules', () => {
         store = {};
       }
     };
-    spyOn(sessionStorage, 'getItem')
-      .and.callFake(mockLocalStorage.getItem);
-    spyOn(sessionStorage, 'setItem')
-      .and.callFake(mockLocalStorage.setItem);
-    spyOn(sessionStorage, 'removeItem')
-      .and.callFake(mockLocalStorage.removeItem);
-    spyOn(sessionStorage, 'clear')
-      .and.callFake(mockLocalStorage.clear);
+    spyOn (sessionStorage, 'getItem')
+      .and.callFake (mockLocalStorage.getItem);
+    spyOn (sessionStorage, 'setItem')
+      .and.callFake (mockLocalStorage.setItem);
+    spyOn (sessionStorage, 'removeItem')
+      .and.callFake (mockLocalStorage.removeItem);
+    spyOn (sessionStorage, 'clear')
+      .and.callFake (mockLocalStorage.clear);
     customRequestOptions = new CSTRequestOptions ();
   });
 
@@ -37,12 +37,12 @@ describe ('CSTRequestOptions: Modules', () => {
     expect (customRequestOptions.merge).toBeDefined ();
   });
   it ('customRequestOptions merge will return default options RequestOptions', () => {
-    const options = customRequestOptions.merge();
-    expect (options instanceof RequestOptions).toBeTruthy();
+    const options = customRequestOptions.merge ();
+    expect (options instanceof RequestOptions).toBeTruthy ();
   });
   it ('customRequestOptions merge and append token in request', () => {
-    sessionStorage.setItem('access_token', 'xxxxxx');
-    const options = customRequestOptions.merge();
-    expect (options.headers.get('Authorization')).toContain('Bearer xxxxxx');
+    sessionStorage.setItem ('access_token', 'xxxxxx');
+    const options = customRequestOptions.merge ();
+    expect (options.headers.get ('Authorization')).toContain ('Bearer xxxxxx');
   });
 });

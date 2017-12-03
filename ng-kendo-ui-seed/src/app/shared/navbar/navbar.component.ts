@@ -1,13 +1,13 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
-@Component({
+@Component ({
   selector: 'ng-k-navbar',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  @Input('routes')
+  @Input ('routes')
   routes: any[] = [
     {
       path: '/login',
@@ -50,7 +50,9 @@ export class NavBarComponent implements OnInit {
       label: 'Contact'
     },
   ];
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
