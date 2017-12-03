@@ -1,6 +1,6 @@
 {
   "name": "generator-ng-kendo-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generator for kendo angular ui components",
   "main": "index.js",
   "scripts": {

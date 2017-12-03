@@ -62,7 +62,11 @@ source ~/.bashrc #(or ~/.profile or ~/.bashrc_profile)
 **Note:** Make sure prefix path should include your user directory + .npm-global
 
 ##Change Logs:
-* First Draft: [v0.0.1](https://github.com/deepakshrma/generator-ng-kendo-ui/releases/tag/v0.0.1)
+* Clean Up Login Page: [v0.0.2](https://github.com/deepakshrma/generator-ng-kendo-ui/releases/tag/v0.0.2)  
+-Added login page  
+-Style login page  
+-Introduce kendo buttons
+* First Draft: [v0.0.1](https://github.com/deepakshrma/generator-ng-kendo-ui/releases/tag/v0.0.1)  
 Import angular kendo ui libs, first draft of seed without templates
 
 **Note:** Still work in progress
