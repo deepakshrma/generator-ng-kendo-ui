@@ -2,7 +2,7 @@
 "use strict";
 const http = require('http');
 const jsonServer = require('json-server');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 const cors = require('cors');
 const data = require('./db.json');
 const server = jsonServer.create();
@@ -18,7 +18,7 @@ const isAuthorized = (request, response, next) => {
 };
 server.use(middlewares);
 server.use(isAuthorized);
-server.use(bodyParser.urlencoded({extended: false}))
+server.use(bodyParser.urlencoded({extended: false}));
 server.use(bodyParser.json());
 // Add custom routes before JSON Server router
 server.get('/all', (req, res) => {
@@ -27,8 +27,7 @@ server.get('/all', (req, res) => {
 server.post('/login', (req, res) => {
   if (!req.body) return res.sendStatus(400);
   const isLogin = data.users.some((user) => {
-    console.log(req.body.password, user.password)
-    return user.password === req.body.password;
+    return user.username === req.body.username && user.password === req.body.password;
   });
   if (isLogin) {
     res.send({token: 'xxxx-xxxx'});

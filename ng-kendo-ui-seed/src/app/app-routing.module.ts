@@ -3,17 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './shared/statics/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoggedInUserGuard } from './shared/providers/logged-in-guard';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
-  {path: 'home', component: DashboardComponent},
+  {path: 'home', canActivate: [LoggedInUserGuard], component: DashboardComponent},
   {path: '404', component: PageNotFoundComponent},
-  {path: '**', redirectTo: '404', pathMatch: 'full' }
+  {path: '**', redirectTo: '404', pathMatch: 'full'}
 ];
 
 @NgModule ({
-  imports: [RouterModule.forRoot (routes, { useHash: false })],
+  imports: [RouterModule.forRoot (routes, {useHash: false})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
