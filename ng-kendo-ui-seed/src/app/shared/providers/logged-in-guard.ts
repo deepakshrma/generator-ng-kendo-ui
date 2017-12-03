@@ -9,7 +9,7 @@ export class LoggedInUserGuard implements CanActivate {
   public canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean
     | Observable<boolean>
     | Promise<boolean> {
-    return this.loginService.isUserLoggedIn ().do ((isLoggedIn) => {
+    return this.loginService.isUserLoggedIn.do ((isLoggedIn) => {
       if (!isLoggedIn) {
         this.router.navigateByUrl ('/login');
       }

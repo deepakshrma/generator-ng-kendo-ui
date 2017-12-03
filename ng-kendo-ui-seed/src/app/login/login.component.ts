@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   onSubmit(form: NgForm){
     if(form.valid){
       this._ls.login(form.value).map((userInfo) => {
-        return this._ls.isUserLoggedIn();
+        return this._ls.isUserLoggedIn;
       }).subscribe((isLogin) => this._router.navigateByUrl('/home'));
     }
   }

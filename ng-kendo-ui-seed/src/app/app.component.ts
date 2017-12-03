@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from './shared/providers/login.service';
 
 @Component ({
   selector: 'ng-k-root',
@@ -6,13 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  private baseImageUrl = 'https://demos.telerik.com/kendo-ui/content/web/panelbar/';
   title = 'app';
   show = false;
-  private baseImageUrl = 'https://demos.telerik.com/kendo-ui/content/web/panelbar/';
+
+  get isUserLoggedIn() {
+    this._ls.isUserLoggedIn.subscribe ((islogin) => {
+      console.log (islogin);
+    })
+    return this._ls.isUserLoggedIn;
+  }
+
+  constructor(private _ls: LoginService) {
+  }
 
   public open() {
     this.show = !this.show;
   }
+
+  public logout() {
+    this._ls.logout ();
+  }
+
   private imageUrl(imageName: string): string {
     return this.baseImageUrl + imageName + '.jpg';
   }

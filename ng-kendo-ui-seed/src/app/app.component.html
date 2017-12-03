@@ -1,8 +1,8 @@
 <!--<ul id="menu" [ngClass]="{ 'show-menu': show}">-->
 <header>
-  <ng-k-navbar *ngIf="isUserLoggedIn">
-    <ul class="ng-k-menu" style="float: right; position: relative">
-      <li><i class="fa fa-sign-out in-out" aria-hidden="true"></i></li>
+  <ng-k-navbar *ngIf="isUserLoggedIn | async">
+    <ul class="ng-k-menu other-options">
+      <li><i class="fa fa-sign-out in-out" aria-hidden="true" (click)="logout()"></i></li>
     </ul>
   </ng-k-navbar>
 </header>
